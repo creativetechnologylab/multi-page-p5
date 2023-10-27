@@ -61,7 +61,7 @@ button1.mousePressed(goToPage1); // Link button press to function that sets `pag
 ```
 
 ## Code Example
-You can find the full code [here](link_to_your_code_repository). It incorporates all the key concepts discussed above into a working p5.js sketch.
+You can find the full code [here](#multi-page.js). It incorporates all the key concepts discussed above into a working p5.js sketch.
 
 ## Further Exploration
 Why not extend this example by adding more features? For instance, you could create a "Home" button that takes the user back to a default page. The possibilities are endless!
