@@ -1,17 +1,48 @@
 /*
-  Overview:
   This sketch demonstrates a simple way to manage multiple pages or scenes within a single p5.js canvas. 
   While this method is great for small projects, larger projects may benefit from using multiple p5 instances 
-  or separate HTML files for each canvas, though the latter requires web hosting and isn't feasible in the p5 web editor.
+  (check out the advanced multiple canvas example). Another option is to have separate HTML files for each canvas, 
+  but this requires web hosting and isn't feasible in the p5 web editor.
 
-  Key Concepts:
+  Key Concept: Page Management
 
-  1. Page Management: Declare a variable to keep track of the current page.
-  2. Navigation: Use the `page` variable to navigate between pages.
-  3. Switch Statement: Handles the display logic for each page.
-  4. Navigation Buttons: Update the `page` variable based on user interaction.
+  1. Declare a variable to keep track of the current page:
+    let page;
 
-  You'll find more detailed explanations of these concepts within the code comments below.
+  2. To navigate between pages, we use the `page` variable. 
+    Setting "page = 1" means "navigate to the first page."
+    Setting "page = 2" means "navigate to the second page."
+
+  3. The main logic for navigation happens in a 'switch statement':
+
+    switch (page) {
+      case 1:
+        // Code for first page
+        break;
+      case 2:
+        // Code for second page
+        break;
+    }
+
+  Understanding the Switch Statement:
+
+  - The "case" keyword specifies the code that should run for a particular page number.
+  - "break" ends the code block for each page, allowing us to transition to the next case or exit the switch statement.
+  - "default" is an optional case, executed if no other cases match. It's good for handling invalid or undefined page numbers.
+
+  Navigation Buttons:
+
+  We create simple functions that update the `page` variable:
+
+  function goToPage1() {
+    page = 1;
+  }
+
+  These functions are then linked to button presses:
+
+  button1.mousePressed(goToPage1);
+
+  Try adding your own buttons and pages as needed. For example, can you add a "Home" button that takes you to a default page?
 */
 
 let button1, button2;
